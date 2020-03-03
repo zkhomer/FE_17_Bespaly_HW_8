@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script >
+let persons = [
+    {name: "Иван", age: 17},
+    {name: "Мария", age: 35},
+    {name: "Алексей", age: 73},
+    {name: "Яков", age: 12},
+]
+function sortArr(array , field , increase = true ){
+    let result = [].concat(array)
+    for (let i = 0 ; i < array.length - 1 ; i++){
+        for (j=0 ; j<array.length - 1 ; j++ ){
+            if (result [j][field]>result[j+1][field]){
+                [result[j], result[j+1]]=[result[j+1], result[j]]
+            }
+        }
+    }
+    if (increase == false){
+        result.reverse()
+    }
+    return results
+}
+console.log("sorted array: ", sortArray(persons, 'age'))
+ </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 Функция возвращает новый массив, оставляя исходный без изменений.
+2 Всё, что возвращает callback функция добавляется в новый массив.
+3 Функция принимает три аргумента: массив, по которому будет происходить итерация, callback фунцию, которая будет выполнена для каждого элемента массива, и значение, которое будет использовано callback функцией в качестве this.
+4 callback функция, в свою очередь, также работает с тремя аргументами: текущий элемент массива, индекс элемента, ссылка на сам массив. -->
+    <script>
+
+var map = function(arr, callback, thisArg) {
+  var i, length = arr.length, results = [];
+  for (i = 0; i < length; i = i + 1) {
+    results.push(callback.call(thisArg, arr[i], i, arr));
+  }
+  return results;
+};
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["1", {}, null, undefined, "500", 700, 'string']
+        let newArr = arr.map(item => {
+    if (typeof item == 'string' && !isNaN(Number(item))) {
+        return Number(item)
+    }
+    return item;
+})
+console.log("Map: ", newArr)
+        
+        
+        
+        </script>
+</body>
+</html>
